@@ -1,0 +1,125 @@
+/* -----H A M B U R G E R------*/
+@media(max-width:768px) {
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navMenu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--white-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .navItem{
+        margin: 16px 0;
+    }
+    
+    .navMenu.active{
+        left: 0;
+    }
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer h1{
+        padding-left:8px;
+    }
+}
+
+
+/* ----T I M E L I N E----*/
+@media only screen and (min-width: 768px) {
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: var(--dark-color);
+}
+.timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+}
+.timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+}
+.timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+}
+.timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+}
+.timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+}
+.timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+}
+.timeline-content .date {
+    position: absolute;
+    top: -30px;
+}
+.timeline ul li:hover::before {
+    background-color: var(--dark-color);
+}
+}
+
+/* two column at About Page*/
+@media(max-width: 640px){
+    .container-page{
+        display: block;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .flex-logo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tech-stack{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
